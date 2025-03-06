@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shop - Bill</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Bill Container */
+        .bill-container {
+            width: 50%;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(15px);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #0ff;
+            text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+        }
+
+        .bill-details {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .bill-details p {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        .bill-details strong {
+            color: #0ff;
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #0ff, #00d4ff);
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #00d4ff, #0ff);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .bill-container {
+                width: 80%;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bill-container {
+                width: 95%;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bill-container">
+        <h2>🛍 Smart Shop - Invoice</h2>
+        <div class="bill-details">
+            <p><strong>Product:</strong> {{ product.name }}</p>
+            <p><strong>Quantity:</strong> {{ quantity }}</p>
+            <p><strong>Total Price:</strong> ₹{{ total_price }}</p>
+            <p><strong>Date:</strong> {{ current_time }}</p>
+        </div>
+        <a href="/download_bill?product_name={{ product.name }}&quantity={{ quantity }}&total_price={{ total_price }}" class="download-btn">⬇️ Download Invoice</a>
+    </div>
+
+</body>
+</html>

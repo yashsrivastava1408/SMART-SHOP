@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        /* Form Container */
+        .container {
+            width: 350px;
+            padding: 20px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #0ff;
+            text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+            margin-bottom: 15px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #ddd;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #0ff, #00d4ff);
+            color: #000;
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 255, 255, 0.6);
+        }
+
+        /* Toggle Text */
+        .toggle-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .toggle-text a {
+            color: #0ff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .toggle-text a:hover {
+            text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Form Container Hide/Show */
+        .form-container {
+            display: none;
+        }
+        .form-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="form-title">Sign Up</h2>
+        
+        <div id="signupForm" class="form-container active">
+            <form action="/signup" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="signinForm" class="form-container">
+            <form action="/signin" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <p class="toggle-text"><a href="#" onclick="toggleForms()">Switch to Sign In</a></p>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signupForm = document.getElementById("signupForm");
+            const signinForm = document.getElementById("signinForm");
+            const formTitle = document.getElementById("form-title");
+            const toggleText = document.querySelector(".toggle-text a");
+
+            signupForm.classList.toggle("active");
+            signinForm.classList.toggle("active");
+
+            if (signupForm.classList.contains("active")) {
+                formTitle.textContent = "Sign Up";
+                toggleText.textContent = "Switch to Sign In";
+            } else {
+                formTitle.textContent = "Sign In";
+                toggleText.textContent = "Switch to Sign Up";
+            }
+        }
+    </script>
+</body>
+</html>

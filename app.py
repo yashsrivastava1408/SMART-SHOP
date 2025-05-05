@@ -259,8 +259,8 @@ def buy_product():
 
     total_price = product["price"] * quantity
     cur.execute(
-    "INSERT INTO sales (customer_id, product_id, quantity_sold, total_price, sale_date) VALUES (%s, %s, %s, %s, NOW())",
-    (session['customer_id'], product_id, quantity, total_price)
+    "INSERT INTO sales (user_id, product_id, quantity, total_price, sale_date, customer_id) VALUES (%s, %s, %s, %s, NOW(), %s)",
+    (session['user_id'], product_id, quantity, total_price, session['customer_id'])
 )
 
 

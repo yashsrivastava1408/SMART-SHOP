@@ -1,12 +1,18 @@
 # SMART-SHOP
 
 
-<img width="1648" alt="Image" src="https://github.com/user-attachments/assets/ae822d3b-31da-46de-9d36-77cdad56ef5a" />
+<img width="1638" alt="Image" src="https://github.com/user-attachments/assets/fe1ff06f-d450-41cf-828b-43b8a511e418" />
 
-<img width="1588" alt="Image" src="https://github.com/user-attachments/assets/4d682940-b06f-4986-8c2a-32ad57900a71" />
+<img width="1710" alt="Image" src="https://github.com/user-attachments/assets/d219e67c-7269-41b1-ba21-e0f1c8d9f8ae" />
 
-<img width="1543" alt="Image" src="https://github.com/user-attachments/assets/cdfe842e-ddbc-40b7-b5ea-4c61196079f9" />
+<img width="1700" alt="Image" src="https://github.com/user-attachments/assets/733be4ab-8d4d-4a8b-afd5-4dc1769b1ffd" />
 
-<img width="1635" alt="Image" src="https://github.com/user-attachments/assets/b7ceab92-b9f4-46e9-a5d0-f5f7e90d8207" />
+<img width="1706" alt="Image" src="https://github.com/user-attachments/assets/e0c687ca-3ad9-48e9-9c43-8a21f41a6a93" />
 
-<img width="1643" alt="Image" src="https://github.com/user-attachments/assets/3057f393-6e84-4bb6-93b5-e23f6618598f" /
+<img width="1710" alt="Image" src="https://github.com/user-attachments/assets/3dd9d921-1e36-4d69-987c-501a22280efa" />
+
+<img width="1710" alt="Image" src="https://github.com/user-attachments/assets/63582f63-f179-4513-be79-f4e353883c35" />
+
+<img width="1710" alt="Image" src="https://github.com/user-attachments/assets/f1985766-705a-4942-9ef8-8127fcf95f56" />
+
+<img width="1703" alt="Image" src="https://github.com/user-attachments/assets/7cf8384a-1a38-4ee5-9b48-ee314cb86bb2" />
